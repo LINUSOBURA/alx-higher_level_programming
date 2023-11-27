@@ -1,2 +1,2 @@
 #!bun/bash
-./PYFILE
+python $PYFILE
