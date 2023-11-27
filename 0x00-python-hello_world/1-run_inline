@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PYCODE" > "$(mktemp)" | python
+python3 -c "$PYCODE"
