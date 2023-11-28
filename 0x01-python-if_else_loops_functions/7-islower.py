@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def islower(c):
-    return c in 'abcdefghijklmnopqrstuvwxyz'
+    if c != "":
+        return c in 'abcdefghijklmnopqrstuvwxyz'
