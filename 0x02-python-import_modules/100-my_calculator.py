@@ -6,9 +6,9 @@ from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
     pass
 
-number_of_args = len(argv)
+number_of_args = len(argv) - 1
 
-if number_of_args < 4 or number_of_args > 4:
+if number_of_args != 3:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
 
@@ -28,4 +28,4 @@ else:
     print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
 
-print("{} {} {} = {}".format(a, b, operator, result))
+print("{} {} {} = {}".format(a, operator, b, result))
