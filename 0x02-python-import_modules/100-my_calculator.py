@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
 number_of_args = len(argv)
 
-if number_of_args < 4:
+if number_of_args < 4 or number_of_args > 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
 
