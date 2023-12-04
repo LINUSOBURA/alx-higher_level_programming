@@ -3,9 +3,6 @@
 
 def print_matrix_integer(matrix=[[]]):
     for i in matrix:
-        for x in i:
-            if x == len(i):
-                print("{:d}".format(x), end="")
-            else:
-                print("{:d}".format(x), end=" ")
+        for x in range(len(i)):
+            print("{:d}".format(i[x]), end=" " if x < len(i) - 1 else "")
         print()
