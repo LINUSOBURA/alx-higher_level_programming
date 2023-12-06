@@ -6,4 +6,4 @@ def number_keys(a_dictionary):
     total = 0
     for key in keys:
         total += 1
-    return(total)
+    return total
