@@ -2,14 +2,14 @@
 
 
 def safe_print_list(my_list=[], x=0):
+    if my_list is None:
+        my_list = []
     printed = 0
     for i in range(x):
-            try:
-                print(my_list[i], end="")
-                printed += 1
-            except:
-                pass
-    print('\n')        
-    return(printed)
-                
-                
+        try:
+            print(my_list[i], end="")
+            printed += 1
+        except Exception:
+            pass
+        print()
+    return printed
