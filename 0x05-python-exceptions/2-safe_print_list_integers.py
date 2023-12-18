@@ -2,6 +2,8 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
+    if my_list is None:
+        my_list = []
     int_printed = 0
 
     for i in range(x):
@@ -10,5 +12,6 @@ def safe_print_list_integers(my_list=[], x=0):
             int_printed += 1
         except (ValueError, TypeError):
             pass
-    print('\n')
+    print()
     return int_printed
+
