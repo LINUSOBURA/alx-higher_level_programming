@@ -3,7 +3,7 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
-    if my_list_1 == None or my_list_2 == None:
+    if my_list_1 is None or my_list_2 is None:
         my_list_1 = []
         my_list_2 = []
 
@@ -27,4 +27,6 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
             new_list.append(0)
             break
+        finally:
+            new_list = new_list
     return new_list
