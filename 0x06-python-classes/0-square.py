@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""
+
+
+class Square(object):
+    """
     A class representing a square.
 
     Attributes:
@@ -10,11 +13,8 @@
 
     Example:
     square_instance = Square()
-    print(square_instance.side_length)  # Access the side length of the square.
-"""
+    print(square_instance.side_length)  # Access the side length of the square."""
 
-
-class Square(object):
     def __init__(self):
         """
         Initializes a new square instance with a default side length.
