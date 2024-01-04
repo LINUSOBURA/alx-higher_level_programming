@@ -68,9 +68,10 @@ class Rectangle():
             return ""
         else:
             rectangle_str = ""
+            print_symbol = getattr(self, 'print_symbol', Rectangle.print_symbol)
             for _ in range(self.__height):
-                rectangle_str += str(Rectangle.print_symbol) * self.__width\
-                      + "\n"
+                rectangle_str += str(print_symbol) * self.__width\
+                    + "\n"
             return rectangle_str.rstrip()
 
     def __repr__(self):
