@@ -68,9 +68,9 @@ class Rectangle():
             return ""
         else:
             rectangle_str = ""
-            print_symbol = getattr(self, 'print_symbol', Rectangle.print_symbol)
+            print_symbo = getattr(self, 'print_symbol', Rectangle.print_symbol)
             for _ in range(self.__height):
-                rectangle_str += str(print_symbol) * self.__width\
+                rectangle_str += str(print_symbo) * self.__width\
                     + "\n"
             return rectangle_str.rstrip()
 
