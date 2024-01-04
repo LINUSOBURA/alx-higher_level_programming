@@ -4,6 +4,7 @@
 
 
 class Rectangle():
+    """Public class attribute"""
     number_of_instances = 0
     """
     A class rectangle for creating a rectagle
