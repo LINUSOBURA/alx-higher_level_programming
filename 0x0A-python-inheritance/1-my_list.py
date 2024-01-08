@@ -5,6 +5,8 @@
 class MyList(list):
     """MyList class has one method print_sorted"""
 
+    pass
+
     def print_sorted(self):
         """Prints sorted list"""
         sorted_l = sorted(self)
