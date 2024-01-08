@@ -14,26 +14,6 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__height = height
 
-    @property
-    def width(self):
-        """Getter function to get width value"""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Setter function to set width value"""
-        self.__width = value
-
-    @property
-    def height(self):
-        """Getter function to get height value"""
-        return self.__height
-
-    @width.setter
-    def width(self, value):
-        """Setter function to set height value"""
-        self.__height = value
-
     def area(self):
         """Method that returns area of a rectangle"""
         return self.__height * self.__width
