@@ -1,4 +1,5 @@
-#!/""""""usr/bin/python3
+#!/usr/bin/python3
+"""Simple lookup function"""
 
 
 def lookup(obj):
