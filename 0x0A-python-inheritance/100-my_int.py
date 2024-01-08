@@ -1,4 +1,4 @@
-#!/use/bin/python3
+#!/user/bin/python3
 """Module that inverts != and =="""
 
 
