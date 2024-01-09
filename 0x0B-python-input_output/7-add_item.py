@@ -17,5 +17,5 @@ arg_list.extend(arguments[1:])
 
 save_to_json_file(arg_list, filename)
 
-if __name__ != "__main__":
+if __name__ == "__main__":
     pass
