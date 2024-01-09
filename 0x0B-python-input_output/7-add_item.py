@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Scrript to Load add and save in file"""
 import sys
 
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
