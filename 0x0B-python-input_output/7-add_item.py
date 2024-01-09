@@ -2,6 +2,9 @@
 """Scrript to Load add and save in file"""
 import sys
 
+if __name__ != "__main__":
+    pass
+
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 
@@ -17,5 +20,5 @@ arg_list.extend(arguments[1:])
 
 save_to_json_file(arg_list, filename)
 
-if __name__ == "__main__":
+if __name__ != "__main__":
     pass
