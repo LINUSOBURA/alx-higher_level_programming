@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Module that devides elements of a matrix"""
 
 
 def matrix_divided(matrix, div):
+    """Function to return new devided matrix"""
     if not all(
         isinstance(row, list)
         and all(isinstance(element, (int, float)) for element in row)
