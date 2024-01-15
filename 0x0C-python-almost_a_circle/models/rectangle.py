@@ -91,8 +91,9 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
-            - {self.__width}/{self.__height}"
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id, self.x, self.y, self.width, self.height
+        )
 
     def update(self, *args, **kwargs):
         """Function updates attributes depending on arguments"""
