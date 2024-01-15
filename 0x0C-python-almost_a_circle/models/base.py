@@ -19,7 +19,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Funcion to convert dictionary to Json string"""
-        if not list_dictionaries or list_dictionaries == []:
+        if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -39,7 +39,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Converts from Json String to dictionary"""
-        if json_string is None or json_string == []:
+        if json_string is None or not json_string.strip():
             return []
         return json.loads(json_string)
 
