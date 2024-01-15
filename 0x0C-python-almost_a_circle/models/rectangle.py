@@ -107,6 +107,7 @@ class Rectangle(Base):
                     setattr(self, attr, kwargs[attr])
 
     def to_dictionary(self):
+        """Function to convert rectangle instance to dict representatiom"""
         dict = {
             "x": self.__x,
             "y": self.__y,
