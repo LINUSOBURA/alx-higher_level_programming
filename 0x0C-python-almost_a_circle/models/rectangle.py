@@ -16,7 +16,7 @@ class Rectangle(Base):
         - y (int): The y-coordinate of the rectangle.
         - id (int): The identifier for the rectangle.
         """
-        super().__init__(id)
+        id = super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -104,3 +104,13 @@ class Rectangle(Base):
             for attr in attributes:
                 if attr in kwargs:
                     setattr(self, attr, kwargs[attr])
+
+    def to_dictionary(self):
+        dict = {
+            "x": self.__x,
+            "y": self.__y,
+            "id": self.id,
+            "height": self.__height,
+            "width": self.__width,
+        }
+        return dict
