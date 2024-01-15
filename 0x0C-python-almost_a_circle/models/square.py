@@ -25,6 +25,7 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.height)
 
     def update(self, *args, **kwargs):
+        """Function  to update attributes depending on arguments"""
         attributes = ["id", "size", "x", "y"]
 
         for i, attr_value in enumerate(args):
@@ -36,6 +37,7 @@ class Square(Rectangle):
                     setattr(self, attr, kwargs[attr])
 
     def to_dictionary(self):
+        """Function to convert rectangle instance to dict representatiom"""
         dict = {
             "id": self.id,
             "x": self.x,
