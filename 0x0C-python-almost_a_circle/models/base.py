@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Base Module"""
+import csv
 import json
 
 
@@ -65,5 +66,28 @@ class Base:
                 else:
                     list_dict = cls.from_json_string(data)
                     return [cls.create(**obj) for obj in list_dict]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize instances to CSV file"""
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as file:
+            writer = csv.writer(file)
+            for obj in list_objs:
+                writer.writerow(obj.to_csv())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize instances from CSV file"""
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as file:
+                reader = csv.reader(file)
+                instances = []
+                for row in reader:
+                    instances.append(cls.create_from_csv(row))
+                return instances
         except FileNotFoundError:
             return []

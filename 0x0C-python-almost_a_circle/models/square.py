@@ -24,8 +24,7 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
-        return ("[Square] ({}) {}/{} - {}"
-                .format(self.id, self.x, self.y, self.height))
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.height)
 
     def update(self, *args, **kwargs):
         """Function  to update attributes depending on arguments"""
@@ -49,3 +48,12 @@ class Square(Rectangle):
             "y": self.y,
         }
         return dict
+
+    def to_csv(self):
+        """Return a CSV representation of the Square instance"""
+        return [self.id, self.size, self.x, self.y]
+
+    @classmethod
+    def create_from_csv(cls, csv_row):
+        """Create a Square instance from a CSV row"""
+        return cls(*map(int, csv_row))
