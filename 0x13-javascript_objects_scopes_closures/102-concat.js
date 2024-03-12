@@ -26,7 +26,7 @@ readFileContent(args[2], function (err, f1Content) {
       return;
     }
 
-    const content = f1Content + '\n' + f2Content;
+    const content = f1Content + '\n' + f2Content + '\n';
 
     fs.writeFile(args[4], content, function (err) {
       if (err) {
