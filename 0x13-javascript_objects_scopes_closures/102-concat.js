@@ -2,10 +2,10 @@
 
 const args = process.argv;
 
-const fs = require('fs');
+const fs = require("fs");
 
-function readFileContent (filename, callback) {
-  fs.readFile(filename, 'utf8', function (err, data) {
+function readFileContent(filename, callback) {
+  fs.readFile(filename, "utf8", function (err, data) {
     if (err) {
       callback(err);
       return;
@@ -26,11 +26,11 @@ readFileContent(args[2], function (err, f1Content) {
       return;
     }
 
-    const content = f1Content + '\n' + f2Content + '\n';
+    const content = f1Content + f2Content;
 
     fs.writeFile(args[4], content, function (err) {
       if (err) {
-        console.error('Error writing to file:', err);
+        console.error("Error writing to file:", err);
       }
     });
   });
