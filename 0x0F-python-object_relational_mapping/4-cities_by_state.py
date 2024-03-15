@@ -19,8 +19,8 @@ def mysqlconnect():
     cursor = db_connection.cursor()
 
     cursor.execute(
-        "SELECT cities.id, cities.name, states.name FROM states RIGHT JOIN cities ON cities.state_id = states.id"
-    )
+        "SELECT cities.id, cities.name, states.name FROM states RIGHT\
+            JOIN cities ON cities.state_id = states.id")
 
     for state in cursor.fetchall():
         print(state)
