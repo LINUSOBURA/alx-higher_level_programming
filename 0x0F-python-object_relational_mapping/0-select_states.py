@@ -26,7 +26,5 @@ def mysqlconnect():
     db_connection.close()
 
 
-mysqlconnect()
-
-if __name__ != "__main__":
-    pass
+if __name__ == "__main__":
+    mysqlconnect()
