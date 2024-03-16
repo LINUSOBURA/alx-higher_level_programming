@@ -20,7 +20,8 @@ if __name__ == "__main__":
 
     first_state = session.query(State).first()
 
-    if first_state == []:
-        print("Nothing")
-    else:
+    if first_state:
         print('{}: {}'.format(first_state.id, first_state.name))
+
+    else:
+        print("Nothing")
