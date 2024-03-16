@@ -17,7 +17,7 @@ engine = create_engine(dtabase_url)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-all_states = session.query(State).all()
+all_states = session.query(State).order_by(State.id).all()
 
 for state in all_states:
     print('{}: {}'.format(state.id, state.name))
