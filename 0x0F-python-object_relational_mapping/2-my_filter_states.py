@@ -19,7 +19,7 @@ def mysqlconnect():
                                     db=sys.argv[3])
     cursor = db_connection.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name = '{}'".format(
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'".format(
         sys.argv[4]))
 
     for state in cursor.fetchall():
