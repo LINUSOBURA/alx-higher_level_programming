@@ -19,7 +19,7 @@ def mysqlconnect():
                                     db=sys.argv[3])
     cursor = db_connection.cursor()
     cursor.execute("SELECT * FROM states WHERE name\
-        LIKE 'N%' ORDER BY id ASC")
+        LIKE BINARY 'N%' ORDER BY id ASC")
 
     for state in cursor.fetchall():
         print(state)
