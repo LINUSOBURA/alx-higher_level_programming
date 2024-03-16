@@ -25,6 +25,6 @@ if __name__ == "__main__":
     if get_a_state:
         print('{}'.format(get_a_state.id))
     else:
-        print('Not Found')
+        print('Not found')
 
     session.close()
