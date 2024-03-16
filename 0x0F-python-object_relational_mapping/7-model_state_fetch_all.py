@@ -9,15 +9,16 @@ from sqlalchemy.orm import sessionmaker
 
 from model_state import Base, State
 
-dtabase_url = ('mysql+mysqldb://{}:{}@localhost/{}'.format(
-    argv[1], argv[2], argv[3]))
+if __name__ == "__main__":
+    dtabase_url = ('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        argv[1], argv[2], argv[3]))
 
-engine = create_engine(dtabase_url)
+    engine = create_engine(dtabase_url)
 
-Session = sessionmaker(bind=engine)
-session = Session()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-all_states = session.query(State).order_by(State.id).all()
+    all_states = session.query(State).order_by(State.id).all()
 
-for state in all_states:
-    print('{}: {}'.format(state.id, state.name))
+    for state in all_states:
+        print('{}: {}'.format(state.id, state.name))
