@@ -4,10 +4,19 @@
 
 def find_peak(list_of_integers):
     """Function to find peak"""
-    max = 0
-    if list_of_integers is None or len(list_of_integers) == 0:
+    if not list_of_integers:
         return None
-    for i in list_of_integers:
-        if i > max:
-            max = i
-    return max
+    left = 0
+    right = len(list_of_integers) - 1
+
+    while left < right:
+        midium = (left + right) // 2
+
+        if list_of_integers[midium] > list_of_integers[midium - 1]\
+            and list_of_integers[midium] > list_of_integers[midium + 1]:
+            return list_of_integers[midium]
+        elif list_of_integers[midium] < list_of_integers[midium + 1]:
+            left = midium + 1
+        else:
+            right = midium - 1
+    return list_of_integers[left]
