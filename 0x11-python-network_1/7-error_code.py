@@ -11,7 +11,9 @@ if __name__ == "__main__":
     url = sys.argv[1]
     try:
         response = requests.get(url)
-        print(response.text)
-        response.raise_for_status()
+        if response.status_code == 200:
+            print(response.text)
+        else:
+            response.raise_for_status()
     except requests.exceptions.HTTPError:
         print("Error code: {}".format(response.status_code))
