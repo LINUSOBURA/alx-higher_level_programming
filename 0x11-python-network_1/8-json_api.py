@@ -19,7 +19,7 @@ if __name__ == "__main__":
         json_resp = response.json()
         if json_resp:
             for item in json_resp:
-                print("[{}] {}".format(item['id'], item['name']))
+                print("[{}] {}".format(item[1], item[2]))
         else:
             print("No result")
     except ValueError:
