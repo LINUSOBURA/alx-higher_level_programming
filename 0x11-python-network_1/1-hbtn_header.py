@@ -7,5 +7,5 @@ if __name__ == "__main__":
     url = sys.argv[1]
 
     with urllib.request.urlopen(url) as response:
-        x_id = response.getheader("X-Request-Id")
+        x_id = dict(response.headers).get("X-Request-Id")
     print(x_id)
