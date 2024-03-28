@@ -8,14 +8,13 @@ import sys
 
 import requests
 
-if len(sys.argv) == 1:
-    letter = ""
-else:
-    letter = sys.argv[1]
-
 if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        letter = ""
+    else:
+        letter = sys.argv[1]
     url = "http://0.0.0.0:5000/search_user"
-    response = requests.post(url, params={"q": letter})
+    response = requests.post(url, data={"q": letter})
     try:
         json_resp = response.json()
         if json_resp:
