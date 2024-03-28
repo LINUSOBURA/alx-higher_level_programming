@@ -9,6 +9,6 @@ with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
     decoded_body = body.decode("utf-8")
 
 print("""Body response:
-	- type: {}
-	- content: {}
-	- utf8 content: {}""".format(body_type, body, decoded_body))
+      - type: {}
+      - content: {}
+      - utf8 content: {}""".format(body_type, body, decoded_body))
