@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# sends post request and returns a response
+"""sends post request and returns a response"""
 import sys
 import urllib.parse
 import urllib.request
