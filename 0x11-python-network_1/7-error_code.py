@@ -5,12 +5,12 @@ to the URL and displays the body of the response
 """
 import sys
 
-import requests
+import requests.exceptions
 
 if __name__ == "__main__":
     url = sys.argv[1]
     response = requests.get(url)
     try:
         print(response.text)
-    except requests.HTTPError:
+    except requests.exceptions.HTTPError:
         print("Error code: {}".format(response.status_code))
