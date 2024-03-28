@@ -12,6 +12,5 @@ if __name__ == "__main__":
     response = requests.get(url)
     try:
         print(response.text)
-        error = response.raise_for_status()
     except requests.HTTPError:
         print("Error code: {}".format(response.status_code))
