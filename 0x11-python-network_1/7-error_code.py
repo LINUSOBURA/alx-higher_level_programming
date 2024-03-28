@@ -9,8 +9,8 @@ import requests.exceptions
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    response = requests.get(url)
     try:
+        response = requests.get(url)
         print(response.text)
         response.raise_for_status()
     except requests.exceptions.HTTPError:
