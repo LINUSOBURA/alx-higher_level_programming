@@ -1,12 +1,9 @@
 #!/usr/bin/node
 
-const { rejects } = require("assert");
-const { error } = require("console");
-const { resolve } = require("path");
-const request = require("request");
+const request = require('request');
 
 const movieId = process.argv[2];
-const url = "https://swapi-api.alx-tools.com/api/films/" + movieId;
+const url = 'https://swapi-api.alx-tools.com/api/films/' + movieId;
 
 request(url, (err, response, body) => {
   if (err) {
