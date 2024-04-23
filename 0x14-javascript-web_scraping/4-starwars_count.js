@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require('request');
+const request = require("request");
 
 const url = process.argv[2];
 
@@ -16,10 +16,10 @@ request(url, (err, response, body) => {
     for (const film of films) {
       if (
         film.characters.includes(
-          'https://swapi-api.alx-tools.com/api/people/18/'
+          "https://swapi-api.alx-tools.com/api/people/18/"
         )
       ) {
-        count++;
+        count += 1;
       }
     }
     console.log(count);
